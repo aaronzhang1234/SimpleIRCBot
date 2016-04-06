@@ -8,17 +8,25 @@ public class CatFact extends PircBot {
 		setName(name);
 	}
 	public void onMessage(String channel, String sender,String login, String hostname, String message) {
-		if (message.equalsIgnoreCase("@catfacts")) 
+		if (message.equalsIgnoreCase("@catfact")) 
 		{
 			sendMessage(channel, "CATS CANNOT BREATHE");
 		}
-		if(message.equalsIgnoreCase("!John Madden Fact"))
+		if(message.equalsIgnoreCase("@botcommands"))
 		{
-			sendMessage(channel, "John Madden doesn't sleep");
+			sendMessage(channel, "@catfact - for a catfact \n@trvia for fun trivia \n @randomkick to be kicked \n@ban to get banned");
 		}
-		if(message.equalsIgnoreCase("damn daniel"))
+		if(message.equalsIgnoreCase("@randomkick"))
 		{
-			kick(channel, sender, "please, no memers allowed");
+			kick(channel, sender);
+		}
+		if(message.equalsIgnoreCase("@trvia"))
+		{
+			sendMessage(channel, "@trvia does not work now");
+		}
+		if(message.equalsIgnoreCase("@ban"))
+		{
+			sendMessage(channel, "cannot ban unless operator");
 		}
 		if(message.equalsIgnoreCase("Change your nickname"))
 		{
@@ -29,6 +37,12 @@ public class CatFact extends PircBot {
 		}
 		
 	}
+	protected void onConnect()
+	{
+		sendMessage("#nimbyesttest","HELLO I AM ALIVE");
+	}
+	
+	
 
 	
 }
