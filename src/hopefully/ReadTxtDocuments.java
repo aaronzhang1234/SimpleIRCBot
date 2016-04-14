@@ -9,7 +9,8 @@ import java.util.ArrayList;
 public class ReadTxtDocuments {
 
 	private ArrayList <String> catfact = new ArrayList<>();
-	
+	private ArrayList <String> triviaQuestions = new ArrayList<>();
+	private ArrayList <String> triviaAnswers = new ArrayList<>();	
 	
 	public ArrayList getCatFact() throws IOException
 	{
@@ -22,6 +23,49 @@ public class ReadTxtDocuments {
 			catfact.add(line);
 		}
 		return catfact;
+	}
+	public ArrayList getTriviaQuestions() throws IOException
+	{
+		BufferedReader re = new BufferedReader(new FileReader("trivia.txt"));
+		
+		int i = 1;
+		String line ="";
+		
+		while((line=re.readLine()) != null)
+		{
+			if(i%2 == 1)
+			{
+				triviaQuestions.add(line);
+			}
+			else
+			{
+				re.readLine();
+			}
+			i++;
+		}
+		return triviaQuestions;
+	}
+	public ArrayList getTriviaAnswers() throws IOException
+	{
+
+		BufferedReader re = new BufferedReader(new FileReader("trivia.txt"));
+		
+		int i = 1;
+		String line ="";
+		
+		while((line=re.readLine()) != null)
+		{
+			if(i%2 == 0)
+			{
+				triviaAnswers.add(line);
+			}
+			else
+			{
+				re.readLine();
+			}
+			i++;
+		}
+		return triviaAnswers;
 	}
 	
 	
