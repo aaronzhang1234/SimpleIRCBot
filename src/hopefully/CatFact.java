@@ -14,20 +14,20 @@ public class CatFact extends PircBot {
 	}
 	
 	public void onMessage(String channel, String sender,String login, String hostname, String message) {
-		if (message.equalsIgnoreCase("@catfact")) 
+		if (message.equalsIgnoreCase("@catfact"))  
 		{
 			ReadTxtDocuments reader = new ReadTxtDocuments();
-			try 
-			{
-				cats = reader.getCatFact();
-			} 
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
-			int random =(int) Math.random()*cats.size();
 			
-			sendMessage(channel, cats.get(random));
+				try {
+					cats = reader.getCatFact();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			System.out.println(cats.size());
+			System.out.println((int)(Math.random()*cats.size()));
+			sendMessage(channel, cats.get((int) (Math.random()*cats.size())));
 			
 		}
 		if(message.equalsIgnoreCase("@botcommands"))

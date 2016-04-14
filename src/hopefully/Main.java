@@ -8,7 +8,7 @@ import org.jibble.pircbot.NickAlreadyInUseException;
 
 public class Main {
 
-	static ArrayList cats;
+	
 	
 	public static void main(String[] args) throws NickAlreadyInUseException, IOException, IrcException {
 		CatFact cat = new CatFact("botter");
