@@ -69,18 +69,7 @@ public class BotBot extends PircBot {
 		{
 			sendMessage(channel, "TRIVIA STARTU");
 			
-			for(int i =0; i<2;i++)
-			{
-				sendMessage(channel,triv.getQuestion());
-				Date sec = cal.getTime();
-				while(true)
-				{
-					if(message.equalsIgnoreCase(triv.getAnswer()));
-					{
-						sendMessage(channel, sender + "got the right answer!");
-					}
-				}
-			}
+			sendMessage(channel,triv.getQuestion());
 		}
 		
 	}
