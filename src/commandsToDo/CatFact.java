@@ -8,13 +8,18 @@ import hopefully.ReadTxtDocuments;
 public class CatFact {
 
 	ArrayList<String> catfact;
-	public CatFact()
-	{}
+	public CatFact() 
+	{
+		ReadTxtDocuments reader = new ReadTxtDocuments();
+		try {
+			catfact = reader.getCatFact();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public String getCatFact() throws IOException
 	{
-		ReadTxtDocuments reader = new ReadTxtDocuments();
-		catfact = reader.getCatFact();
 
 		return catfact.get((int)(Math.random()*catfact.size()));
 		

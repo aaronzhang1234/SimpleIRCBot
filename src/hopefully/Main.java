@@ -6,13 +6,19 @@ import java.util.ArrayList;
 import org.jibble.pircbot.IrcException;
 import org.jibble.pircbot.NickAlreadyInUseException;
 
+import commandsToDo.Jokes;
+import commandsToDo.Trivia;
+
 public class Main {
 
 	static ArrayList<String>test;
 	
 	public static void main(String[] args) throws NickAlreadyInUseException, IOException, IrcException {
 		  BotBot bot = new BotBot("botter");
-
+		  
+		  
+		 
+		  
 			bot.setVerbose(true);
 			bot.connect("irc.freenode.net");
 			bot.joinChannel("#nimbyesttest");

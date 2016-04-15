@@ -11,6 +11,9 @@ public class ReadTxtDocuments {
 	private ArrayList <String> catfact = new ArrayList<>();
 	private ArrayList <String> triviaQuestions = new ArrayList<>();
 	private ArrayList <String> triviaAnswers = new ArrayList<>();	
+	private ArrayList <String> oneLineJokes = new ArrayList<>();
+	private ArrayList <String> jokeQuestions = new ArrayList<>();
+	private ArrayList <String> jokeAnswers = new ArrayList<>();
 	
 	public ArrayList getCatFact() throws IOException
 	{
@@ -51,7 +54,6 @@ public class ReadTxtDocuments {
 		
 		while((line=re.readLine()) != null)
 		{
-			System.out.println(i%2);
 			if(i%2 == 0)
 			{
 				triviaAnswers.add(line);
@@ -61,7 +63,53 @@ public class ReadTxtDocuments {
 		}
 		return triviaAnswers;
 	}
+	public ArrayList oneLineJokes() throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader("jokes.txt"));
+		
+		String line = "";
+		
+		while ((line=br.readLine())!=null)
+		{
+			if(!(line.substring(line.length()-1).equals("?")) && !(line.substring(line.length()-1).equals("a")))
+			{
+				oneLineJokes.add(line);
+			}
+		}
+		return oneLineJokes;
+	}
+	public ArrayList getJokeQuestions() throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader("jokes.txt"));
+		
+		String line = "";
+		
+		while ((line=br.readLine())!=null)
+		{
+			
+			if(line.substring(line.length()-1).equals("?"))
+			{
+				jokeQuestions.add(line);
+			}
+		}
+		return jokeQuestions;
+	}
 	
-	
+	public ArrayList getJokeAnswers() throws IOException
+	{
+		BufferedReader br = new BufferedReader(new FileReader("jokes.txt"));
+		
+		String line = "";
+		
+		while ((line=br.readLine())!=null)
+		{
+			
+			if(line.substring(line.length()-1).equals("a"))
+			{
+				jokeAnswers.add(line.substring(0,line.length()-2));
+			}
+		}
+		return jokeAnswers;
+	}
 	
 }
