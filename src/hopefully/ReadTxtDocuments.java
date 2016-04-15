@@ -37,10 +37,6 @@ public class ReadTxtDocuments {
 			{
 				triviaQuestions.add(line);
 			}
-			else
-			{
-				re.readLine();
-			}
 			i++;
 		}
 		return triviaQuestions;
@@ -55,14 +51,12 @@ public class ReadTxtDocuments {
 		
 		while((line=re.readLine()) != null)
 		{
+			System.out.println(i%2);
 			if(i%2 == 0)
 			{
 				triviaAnswers.add(line);
 			}
-			else
-			{
-				re.readLine();
-			}
+			
 			i++;
 		}
 		return triviaAnswers;
