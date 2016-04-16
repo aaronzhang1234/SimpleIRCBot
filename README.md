@@ -10,12 +10,19 @@ First thing that popped when I goggled "how to make an irc bot"
 All catfacts come from this source plus some I made.
 http://www.buzzfeed.com/chelseamarshall/meows#.ft141pp5pz
 
-Checklist of things to do
+Checklist of things to do:
+__________________________
 
 Trivia - WIP
+
 Catfacts - Done
+
 Jokes = Done
+
 RSS Feed Reader - Done
+
 Logger that transfers activity into a txt document - Haven't Started
+
 RPG - Haven't Started
+
 SelfAwareness - Haven't Started
