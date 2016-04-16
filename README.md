@@ -15,7 +15,7 @@ Checklist of things to do
 Trivia - WIP
 Catfacts - Done
 Jokes = Done
-RSS Feed Reader - Haven't Started
+RSS Feed Reader - Done
 Logger that transfers activity into a txt document - Haven't Started
 RPG - Haven't Started
 SelfAwareness - Haven't Started
